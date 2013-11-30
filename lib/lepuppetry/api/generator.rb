@@ -9,6 +9,10 @@ module LePuppetry
         Cli::Generate.desc usage, help_text
       end
 
+      def self.option(name, settings={})
+        Cli::Generate.option name, settings
+      end
+
       def self.generate(name, &body)
         Cli::Generate.send :define_method, name, body
       end

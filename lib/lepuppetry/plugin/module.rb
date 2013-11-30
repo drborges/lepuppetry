@@ -4,8 +4,10 @@ module LePuppetry
   module Plugin
     class Module < Api::Generator
       desc 'pmodule [NAME]', 'generates module structure'
+      option :forge
       generate :pmodule do |name|
-        say "generate module #{name}"
+        forge = options[:forge] ? 'forge' : ''
+        say "generate #{forge} module #{name}"
       end
     end
   end
