@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+$:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+require "lepuppetry/cli/core"
+require "lepuppetry/api/core"
+require "lepuppetry/plugin/core"
+
+LePuppetry::Cli::App.start(ARGV)

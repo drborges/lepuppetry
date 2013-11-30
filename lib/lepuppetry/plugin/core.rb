@@ -1,0 +1,1 @@
+require "lepuppetry/plugin/module"
